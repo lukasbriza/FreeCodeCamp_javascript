@@ -1,6 +1,7 @@
 import { palindrome } from "./palindrome.js";
 import { romanNumbersConvertor } from "./romanNumbersConvertor.js";
 import { caesarCipher } from "./caesarCipher.js";
+import { telephoneNumValidator } from "./telephoneNumValidator.js";
 
 let palindromeBtn = document.getElementById("palindrome-button");
 let romanNumbersConvertorBtn = document.getElementById("romanNumbers-button");
@@ -26,4 +27,20 @@ let caesarCipherResult = document.getElementById("cipher-result");
 
 caesarCipherBtn.addEventListener("click", () => {
   caesarCipherResult.innerHTML = caesarCipher(caesarCipherTxt.value);
+});
+
+let telephoneNumValidatorBtn = document.getElementById(
+  "telephoneNumValidator-button"
+);
+let telephoneNumValidatorTxt = document.getElementById(
+  "telephoneNumvalidator-text"
+);
+let telephoneNumValidatorResult = document.getElementById(
+  "telephoneNumValidator-result"
+);
+
+telephoneNumValidatorBtn.addEventListener("click", () => {
+  telephoneNumValidatorResult.innerHTML = telephoneNumValidator(
+    telephoneNumValidatorTxt.value
+  );
 });
